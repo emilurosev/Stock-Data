@@ -43,14 +43,14 @@ def getHistoricalStockData(api_key=API_KEY, symbols=SYMBOLS, output_size=OUTPUT_
             json.dump(data, f)
         counter = counter + 1
 
-def writeIntradayStockDataToDatabase(symbols=SYMBOLS):
+def writeIntradayStockDataToDatabase(symbols=SYMBOLS, interval=INTERVAL):
     start = datetime.datetime.now()
 
     for symbol in symbols:
         final = []
         with open(f'results/{symbol.lower()}_alpha_intraday.json', 'r') as f:
             data = json.load(f)
-            d = data[f'Time Series ({INTERVAL})']
+            d = data[f'Time Series ({interval})']
         for key, value in d.items():
             tmp = {'_id': datetime.datetime.strptime(key, '%Y-%m-%d %H:%M:%S'), 'open': value['1. open'], 'high': value['2. high'], 'low': value['3. low'], 'close': value['4. close'], 'volume': value['5. volume']}
             final.append(tmp)
