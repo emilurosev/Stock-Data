@@ -1,4 +1,4 @@
-Pokretanjem skripte main.py se svlaci oko 50k berzanskih podataka za 10 velikih svetskih kompanija preko Alpha Vantage API-ja, koji se dalje smestaju u Mongo bazu i json fajlove.
+Pokretanjem skripte main.py se svlaci oko 50k berzanskih podataka za 10 velikih svetskih kompanija preko Alpha Vantage API-ja, odradi se preprocessing i dalje se smestaju u Mongo bazu i json fajlove.
 
 Prati pocetnu, maksimalnu, minimalnu i zavrsnu cenu deonice, kao i volumen unutar jednog vremenskog uzorka. 
 
@@ -8,4 +8,4 @@ Ova skripta skida podatke u dva razlicita vremenska intervala(vremenska zona US/
 
 2.) Svaki radni dan u ponoc - Istorijski podaci. Ova skripta je dobavlja istorijske podatke od 2000 do 2020 za svih 10 kompanija. Frekvencija je upisa je 1 dokument dnevno po kompaniji.
 
-U dodatku su dva Jupyter Notebook-a u kojima su vizuelno prikazani svi prikupljeni podaci, kao i njihov export u csv fajlove.   
+U dodatku su dva Jupyter Notebook-a u kojima su vizuelno prikazani svi prikupljeni podaci, kao i njihov export u csv fajlove.
